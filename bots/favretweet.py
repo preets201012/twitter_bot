@@ -47,4 +47,5 @@ def main(keywords):
 
 if __name__ == "__main__":
     # main(["#FarmersProtests", "#FarmersProtests", "#FarmersDilliChalo", "#standwithfarmerschallenge"])
-    main(["JustinTrudeau"])
+    # main(["JustinTrudeau"])
+    main(["#MyTestTweet202011"])
