@@ -49,5 +49,5 @@ def main(keywords):
 
 
 if __name__ == "__main__":
-    main(["#FarmersProtests", "#FarmersProtest", "#FarmersDilliChalo",
-          "#FarmersBill2020", "#FarmersAbovePolitics", "#StandWithFarmersChallenege", "#WeStandWithFarmers", "#standwithfarmerschallenge", "#FarmerProtest", "#TakeBackFarmBills", "#WeSupportFarmers", "#IStandWithFarmers", "#FarmersDelhiProtest"])
+    main(["#FarmersProtests", "#FarmersProtest", "#FarmerProtest", "#FarmersDilliChalo", "#FarmersBill2020", "#FarmersAbovePolitics", "#StandWithFarmersChallenege",
+          "#WeStandWithFarmers", "#standwithfarmerschallenge", "#FarmerProtest", "#TakeBackFarmBills", "#WeSupportFarmers", "#IStandWithFarmers", "#FarmersDelhiProtest"])
