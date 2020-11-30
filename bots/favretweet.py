@@ -18,18 +18,18 @@ class FavRetweetListener(tweepy.StreamListener):
 
     def on_status(self, tweet):
         logger.info(f"Processing tweet id {tweet.id}")
-        time.sleep(300)
+        time.sleep(600)
 
         if tweet.in_reply_to_status_id is not None or \
                 tweet.user.id == self.me.id:
             # This tweet is a reply or I'm its author so, ignore it
             return
-        if not tweet.favorited:
-            # Mark it as Liked, since we have not done it yet
-            try:
-                tweet.favorite()
-            except Exception as e:
-                logger.error("Error on fav", exc_info=True)
+        # if not tweet.favorited:
+        #     # Mark it as Liked, since we have not done it yet
+        #     try:
+        #         tweet.favorite()
+        #     except Exception as e:
+        #         logger.error("Error on fav", exc_info=True)
         if not tweet.retweeted:
             # Retweet, since we have not retweeted it yet
             try:
