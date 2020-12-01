@@ -1,3 +1,3 @@
 web: python server.py
 worker: python bots/favretweet.py
-worker: python bots/followfollowers.py
+processor: python bots/followfollowers.py
