@@ -12,11 +12,23 @@ logger = logging.getLogger()
 
 def follow_followers(api):
     logger.info("Retrieving and following followers")
-    for follower in tweepy.Cursor(api.followers).items():
+    for follower in limit_handled(tweepy.Cursor(api.followers).items()):
         if not follower.following:
-            logger.info(f"Following {follower.name}")
-            follower.follow()
+            try:
+                logger.info(f"Following {follower.name}")
+                follower.follow()
+            except Exception as e:
+                logger.error("Error during following", exc_info=True)
+
             time.sleep(60)
+
+
+def limit_handled(cursor):
+    while True:
+        try:
+            yield cursor.next()
+        except tweepy.RateLimitError:
+            time.sleep(15 * 60)
 
 
 def main():
