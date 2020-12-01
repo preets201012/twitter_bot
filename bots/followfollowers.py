@@ -16,6 +16,7 @@ def follow_followers(api):
         if not follower.following:
             logger.info(f"Following {follower.name}")
             follower.follow()
+            time.sleep(60)
 
 
 def main():
@@ -23,7 +24,7 @@ def main():
     while True:
         follow_followers(api)
         logger.info("Waiting...")
-        time.sleep(60)
+        time.sleep(300)
 
 
 if __name__ == "__main__":
