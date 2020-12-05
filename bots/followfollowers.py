@@ -28,7 +28,7 @@ def limit_handled(cursor):
         try:
             yield cursor.next()
         except tweepy.RateLimitError:
-            time.sleep(15 * 60)
+            time.sleep(60 * 60)
 
 
 def main():
